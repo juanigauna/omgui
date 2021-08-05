@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    outline: none;
+}
+:root {
+    --shadow: #00000050;
+}
+body {
+    background-color: #184c25;
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: normal;
+}
+input, button {
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: 180ms;
+}
+input {
+    background-color: #cecece;
+    border-color: #cecece;
+}
+input:focus {
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: 0 0 7px #ffffff71;
+}
+button {
+    background: #359144;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #3bad4e;
+    box-shadow: 0 0 16px #54ee6e81;
+}
+input:active, button:active {
+    opacity: .5;
+    transform: scale(.98);
+    box-shadow: none;
+}
+.center-absolute {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.card {
+    background: #1a1a1a;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+.card-body {
+    padding: 35px
+}
+.w-420 {
+    width: 420px;
+}
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+.chat-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    background-color: #206732;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 5px 22px var(--shadow);
+}
+.chat-header {
+    padding: 20px;
+}
+.chat-status {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.message-recipent {
+    height: 100%;
+    padding: 0 20px;
+    overflow: auto;
+}
+.message {
+    background-color: #38383847;
+    padding: 5px 15px;
+    color: #ffffff;
+    display: block;
+    width: fit-content;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.message-box {
+    display: flex;
+    background-color: #38383847;
+    gap: 20px;
+    padding: 20px;
+}
+.message-box input {
+    flex: 1 1 auto;
+}
+.spinner {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    animation-name: spinner;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    display: block;
+    border-left-color: transparent;
+}
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width: 425px) {
+    .chat-content {
+        margin: 7px;
+    }
+    .center-absolute {
+        margin: 7px
+    }
+}
