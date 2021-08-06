@@ -25,4 +25,4 @@ const io = socket(server, {
 
 io.on('connection', socket => socketController(io, socket))
 
-server.listen(config.port, () => console.log('Listening port:', config.port))
+server.listen(process.env.PORT, () => console.log('Listening port:', process.env.PORT))
