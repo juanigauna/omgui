@@ -3,7 +3,6 @@ import path from 'path'
 import socket from 'socket.io'
 import http from 'http'
 
-import config from './config'
 import socketController from './controllers/socket-controller'
 
 const express = Express()
