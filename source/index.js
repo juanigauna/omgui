@@ -3,9 +3,8 @@ import path from 'path'
 import socket from 'socket.io'
 import http from 'http'
 
+import config from './config'
 import socketController from './controllers/socket-controller'
-
-const port = process.env.PORT || 3000
 
 const express = Express()
 const server = http.createServer(express)
@@ -24,6 +23,6 @@ const io = socket(server, {
     }
 })
 
-io.on('connection', socket => socketController(socket))
+io.on('connection', socket => socketController(io, socket))
 
-server.listen(port, () => console.log('Server started.'))
+server.listen(config.port, () => console.log('Listening port:', config.port))
